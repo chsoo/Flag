@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Userpage - FLAG</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon_flag.ico" />
+
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Nunito|Orbitron' rel='stylesheet' type='text/css'>
+
+    <link type="text/css" rel="stylesheet" href="/stylesheets/Userpage.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/header.css"/>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="../pulibc/javascripts/pop_up.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+    <!--[if lt IE 9]>
+    <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+    <script src='http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js'></script>
+    <script src="/javascripts/prefixfree.min.js"></script>
+    <![endif]-->
+
+
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+        @import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+        :before, :after {
+            content: '';
+            display: block;
+            position: absolute;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+
+        p {
+            line-height: 1.8;
+        }
+
+        .wrapper {
+            width: 100%px;
+            margin: 0 auto;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .chart {
+            height: 300px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #345 0%, #234 100%);
+        }
+
+
+    </style>
+
+
+
+    <script>
+        function copy_trackback(address) {
+            var IE=(document.all)?true:false;
+            if (IE) {
+                if(confirm("공유URL 주소를 클립보드에 복사하시겠습니까?"))
+                    window.clipboardData.setData("Text", address);
+            } else {
+                temp = prompt("공유URL 주소입니다. Ctrl+C를 눌러 클립보드로 복사하세요", address);
+            }
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+<nav class="navbar navbar-fixed-top "  id="header_nav">
+    <div class="container" id="con1">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll ">
+            <a class="navbar-brand page-scroll col-xs-2" href="/" id="flag_logo"><img src="/images/flag_logo.png" width="100%" height="100%" class="img-responsive";></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <ul class="nav navbar-nav navbar-right" id="nav_ul">
+            <li class="hidden">
+                <a href="#s1"></a>
+            </li>
+
+            <li>
+
+                <div class="dropdown" id="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                        <% if( userID == undefined) { %>
+                        <img src="images/profile_un.png" class="img-responsive" id="dd_profile">
+                        <% } else { %>
+                        <img src="images/profile.png" class="img-responsive" id="dd_profile">
+                        <% }%>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation" style="text-align: center"><a href="/">메인페이지</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <% if( userID != undefined) { %>
+                        <li role="presentation" style="text-align: center"><a role="menuitem" tabindex="-1" href="/signout">로그아웃</a></li>
+                        <% }%>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="container" style="padding: 0px;">
+    <div>
+        <h2 class="section-heading" style="padding-top: 80px; margin-bottom: 30px"><span class=" label label-success"><%=pageID%>님의 페이지입니다.</span></h2>
+    </div>
+</div>
+
+<!--사용량-->
+<%
+var sum=0;
+for(var i = 0;i < flags.length;i++){
+    var num = parseInt(flags[i].fileSize);
+    sum = sum + num;
+}
+var sumMB = (sum/1024)/1024;
+var sumMB2 = 500 - sumMB;
+var percent = (sumMB/500)*100;
+%>
+
+
+
+
+
+<% if(userID==pageID){ %>
+<div class="container" style="height: 450px; border: 2px solid #999; border-radius: 10px; margin-bottom: 50px; padding: 0px;">
+    <p class="tp" style="margin-bottom: 50px;">주간 데이터 사용량</p>
+    <div class="row">
+        <div class="col-xs-9 block-center">
+            <!--graph1-->
+            <div id='p1'>
+                <canvas id='c1'></canvas>
+            </div>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js'></script>
+            <script src="/javascripts/graph.js"></script>
+
+            <input type="text" class="data1" value="0" style="display: none"></input>
+            <input type="text" class="data2" value="0" style="display: none"></input>
+            <input type="text" class="data3" value="0" style="display: none"></input>
+            <input type="text" class="data4" value="0" style="display: none"></input>
+            <input type="text" class="data5" value="0" style="display: none"></input>
+            <input type="text" class="data6" value="0" style="display: none"></input>
+            <input type="text" class="data7" value="0" style="display: none"></input>
+            <!--graph1 end-->
+        </div>
+
+        <div class="col-xs-3" style="">
+            <!--graph2-->
+            <div>
+                <div class="graph-container" style="margin: 0 auto;">
+                    <div class="graph-donut" data-percent="<%=percent%>" data-background="#000">
+                        <span class="percent"></span>
+                    </div>
+                    <h2 class="graph-title"><span class=" label label-success">현재 사용량</span></h2>
+                </div>
+                <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                <script src="/javascripts/circle.js"></script>
+            </div>
+            <!--graph2 end-->
+            <div>
+                <table class="table table-striped " id="remark_table">
+                    <caption sstyle="text-align: right">이용 현황(단위 : MByte)</caption>
+                    <thead>
+                    <tr>
+                        <td>사용 중</td>
+                        <td>사용 가능</td>
+                        <td>전체 용량</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><%=sumMB.toFixed(1)%>MB</td>
+                        <td><%=sumMB2.toFixed(1)%>MB</td>
+                        <td>500MB</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<% }%>
+
+
+<div class="container" style="margin-bottom: 100px; border: 2px solid #999; border-radius: 10px; padding: 0;">
+    <% if( userID == undefined){ %>
+    <p class="tp"><%=pageID%>님의 파일리스트</p>
+    <table>
+        <thead>
+        <tr>
+            <th>번 호</th>
+            <th>플래그명</th>
+            <th>파일이름</th>
+            <th>기 능</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i = 0;i < flags.length;i++){ %>
+        <% if(flags[i].filePrivate == 'public'){ %>
+        <tr>
+            <td><%= i + 1 %></td>
+            <td><%= flags[i].flagName %></td>
+            <td><%= flags[i].fileName %></td>
+            <td>
+                <input type="button" onclick="copy_trackback('fflag.me/<%=pageID%>/<%= flags[i].flagName %>'); return false;"/>
+            </td>
+        </tr>
+        <% } %>
+        <% } %>
+        </tbody>
+    </table>
+    <% } else if(userID==pageID){ %>
+    <p class="tp"><%=pageID%>님의 파일리스트</p>
+    <table>
+        <thead>
+        <tr>
+            <th>번 호</th>
+            <th>플래그명</th>
+            <th>파일이름</th>
+            <th>기 능</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i = 0;i < flags.length;i++){ %>
+        <tr>
+            <td><%= i + 1 %></td>
+            <td><%= flags[i].flagName %></td>
+            <td><%= flags[i].fileName %></td>
+            <td>
+                <input type="button" onclick="copy_trackback('fflag.me/<%=userID%>/<%= flags[i].flagName %>'); return false;"/>
+
+                <% if(flags[i].filePrivate == 'public'){ %>
+                <input class="pp_btn1" type="button" onclick="location.href='/filePrivate?flagID=<%= flags[i].flagID %>';"/>
+                <% } else if(flags[i].filePrivate == 'private'){%>
+                <input class="pp_btn2" type="button" onclick="location.href='/filePrivate?flagID=<%= flags[i].flagID %>';"/>
+                <% } %>
+                <input type="button" onclick="location.href='/fileDelete?flagID=<%= flags[i].flagID %>';"/>
+            </td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <% } else if(userID!=pageID){%>
+    <p class="tp"><%=pageID%>님의 파일리스트</p>
+    <table>
+        <thead>
+        <tr>
+            <th>번 호</th>
+            <th>플래그명</th>
+            <th>파일이름</th>
+            <th>기 능</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i = 0;i < flags.length;i++){ %>
+        <% if(flags[i].filePrivate == 'public'){ %>
+        <tr>
+            <td><%= i + 1 %></td>
+            <td><%= flags[i].flagName %></td>
+            <td><%= flags[i].fileName %></td>
+            <td>
+                <input type="button" onclick="copy_trackback('fflag.me/<%=pageID%>/<%= flags[i].flagName %>'); return false;"/>
+            </td>
+        </tr>
+        <% } %>
+        <% } %>
+        </tbody>
+    </table>
+    <% } %>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

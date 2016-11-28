@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+
+		<title>FLAG_JOIN</title>
+		<link href='https://fonts.googleapis.com/css?family=Indie+Flower|Nunito|Orbitron' rel='stylesheet' type='text/css'>
+
+		<link type="text/css" rel="stylesheet" href="/stylesheets/join.css">
+		
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script>
+		$(document).ready(function() {
+	        $("#submit").click(function(){
+
+	            var id = $(".input_id").val();
+	            var hasError = false;
+	            var passwordVal = $("#password").val();
+	            var checkVal = $("#password-check").val();
+	            if (id == '' || passwordVal == '' || email=='') {
+	                alert("빈칸을 작성해주세요.");
+	                hasError = true;
+	            }else if (passwordVal != checkVal ) {
+	            	alert("패스워드가 일치하지 않습니다.");
+	                hasError = true;
+	            }
+	            if(hasError == true) {return false;}
+	            
+	            var email = $(".email").val();  
+		        var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;   
+		          
+		        if(regex.test(email) === false) {  
+		            alert("잘못된 이메일 형식입니다.");  
+		            return false;  
+		        }
+	            
+	        });
+	        
+
+
+	    });
+
+		</script>
+	</head>
+	<body>
+		<div class="join_wrap">
+			<h1>회원가입</h1>
+			<form class="join_form" method="post" action="/signup">
+				<fieldset>
+					<legend>회원가입폼</legend>
+						<input type="text" placeholder="아이디" class="input_id"name="userID"><br/>
+						<input type="password" placeholder="비밀번호" class="input_pw" name="userPW" id="password"><br/>
+						<input type="password" placeholder="비밀번호확인"class="input_pw2" id="password-check"><br/>
+						<input type="text" placeholder="E-Mail"name="email" class="email"><br/>
+						<input type="reset" value="입력취소" class="reset_btn">
+						<input type="submit" value="회원가입" class="join_btn" id="submit">
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

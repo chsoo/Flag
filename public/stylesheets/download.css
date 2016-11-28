@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+*{ margin: 0px; padding: 0px; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; color:#000000; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none; }
+table{ border-collapse:collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ display: none; }
+input[type=button], input[type=submit], input[type=reset], input[type=image], button{ cursor: pointer; }
+header, section, footer, nav, aside, figure, article{ display: block; margin: 0px; padding: 0px; }
+
+body{
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAWUlEQVQYV2NUMrT/z4AEWFjZGP78/oUsBGYzIisEKYIBdMVwhTBFIAXIbJhGsEJsEuhijGpmrmA3YnMXsmKwwj+/fjAwMDJheAAkAFOM4hmsKqGKiVIIMgAAsJInr4PnIRoAAAAASUVORK5CYII=),repeat;
+	padding: 100px;
+	text-align: center;
+
+}
+h1{
+	font-size: 80px;
+	font-family: 'Nunito', sans-serif;
+	color: #fff;
+}
+
+.img_flag{
+	margin-top: 170px;
+	width: 200px;
+	position: relative;
+
+}
+
+span{
+	font-size: 25px;
+	color: #fff;
+}
+
+p{
+	font-size: 15px;
+	color: #fff;
+}
+
+.down_btn{
+	font-size: 20px;
+	color: #fff;
+	font-weight: bolder;
+	margin: 80px;
+	background-color: #26a65b;
+	display: inline-block;
+	border-radius: 7px;
+	border: none;
+	padding: 10px 30px 10px 30px
+}
+
+.down_btn:hover{
+	color: #22313f;
+}
+

@@ -1,0 +1,115 @@
+.upload_form{
+	width: 500px;
+	height: 320px;
+	margin: 0px auto;
+	position: relative;
+	text-align: center;
+	z-index: 99;
+}
+
+.dd_form{
+	width: 500px;
+	position: relative;
+	margin-top: 15px;
+}
+
+.d_d{
+	width: 500px;
+	height: 200px;
+	border : 2px dashed #fff;
+	box-sizing: border-box;
+	padding : 25% 25%;
+	color: #fff;
+	font-size: 12px;
+	text-indent: -999px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+
+.add_form{
+
+	width: 500px;
+	height: 80px;
+	margin: 0px auto;
+}
+
+.add_form > li{
+	float: left;
+}
+
+
+
+
+.address_input{
+	font-size: 15px;
+	width: 250px;
+	height: 50px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-image: url(../images/flag_icon.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: contain;
+	text-align: right;
+}
+
+.flag_input{
+	width: 250px;
+	height: 50px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	font-size:15px;
+	color: #26a65b;
+}
+
+.flag_input:focus{
+	outline: none;
+}
+
+.upload_btn{
+	width: 150px;
+	height: 30px;
+	font-weight: bolder;
+	background-color: #26a65b;
+	color: #fff;
+	display: block;
+	margin: 0px auto;
+}
+
+.upload_btn:hover{
+	transition: 0.3s;
+	background-color: #40b96b;
+	color: #22313f;
+}
+
+.radio{
+	width: 25px;
+	height: 25px;
+	display: inline;
+	margin-bottom: 20px;
+}
+
+.success{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	top: 80px;
+	left: 40%;
+}
+
+
+
+
+#url_btn{
+	font-weight: bold;
+	background-color: #26a65b;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+#url_btn:hover{
+	color: #22313f;
+}

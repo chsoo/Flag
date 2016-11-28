@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="utf-8">
+   <title>FLAG</title>
+
+   <link rel="shortcut icon" type="image/x-icon" href="images/favicon_flag.ico" />
+
+   <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Nunito|Orbitron' rel='stylesheet' type='text/css'>
+
+   <link type="text/css" rel="stylesheet" href="/stylesheets/index.css">
+   <link type="text/css" rel="stylesheet" href="/stylesheets/header.css"/>
+   <link type="text/css" rel="stylesheet" href="/stylesheets/login.css">
+   <link type="text/css" rel="stylesheet" href="/stylesheets/upload.css">
+   <link type="text/css" rel="stylesheet" href="/stylesheets/colorbox.css"/>
+
+   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+   <script src="/javascripts/jquery.colorbox.js"></script>
+   <script src="/javascripts/colorbox.js"></script>
+   <script src="/javascripts/gogo.js"></script>
+   <script src="/javascripts/scroll.js"></script>
+   <script src="/javascripts/pop_up.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+   <!--[if lt IE 9]>
+   <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+   <script src='http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js'></script>
+   <![endif]-->
+
+   <script>
+      $(document).ready(function() {
+         $(".upload_btn").click(function(){
+
+            var flag_input = $(".flag_input").val();
+            var file_name = $(".d_d").val();
+            var hasError = false;
+
+            if (file_name=='') {
+               alert("파일이 없습니다.");
+               hasError = true;
+               return false;
+            }else  if (flag_input=='') {
+               alert("플래그 이름을 작성해주세요.");
+               hasError = true;
+               return false;
+            }else{
+               hasError=true;
+            }
+         });
+         $(function v11(){$("#gogo").animate({"top": "-90px"}, 700, null, v11);});
+         $(function v22(){$("#gogo").animate({"top": "-70px"}, 700, null, v22);});
+
+      });
+
+   </script>
+
+   <script>
+      function copy_trackback(address) {
+         var IE=(document.all)?true:false;
+         if (IE) {
+            if(confirm("공유URL 주소를 클립보드에 복사하시겠습니까?"))
+               window.clipboardData.setData("Text", address);
+         } else {
+            temp = prompt("공유URL 주소입니다. Ctrl+C를 눌러 클립보드로 복사하세요", address);
+         }
+      }
+   </script>
+
+</head>
+<body>
+<nav class="navbar navbar-fixed-top "  id="header_nav">
+   <div class="container" id="con1">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll ">
+         <a class="navbar-brand page-scroll col-xs-2" href="#s1" id="flag_logo"><img src="/images/flag_logo.png" width="100%" height="100%" class="img-responsive";></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+
+      <ul class="nav navbar-nav navbar-right" id="nav_ul">
+         <li class="hidden">
+            <a href="#s1"></a>
+         </li>
+         <li>
+            <a class="page-scroll" href="#s2" style="font-size: 20px; color: #ffffff;">서비스 소개</a>
+         </li>
+         <li>
+            <a class="page-scroll" href="#s3"style="font-size: 20px; color: #ffffff; margin-right: 10px">사용방법</a>
+         </li>
+
+         <li>
+
+            <div class="dropdown" id="dropdown">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                  <% if( userID == undefined) { %>
+                  <img src="images/profile_un.png" class="img-responsive" id="dd_profile">
+                  <% } else { %>
+                  <img src="images/profile.png" class="img-responsive" id="dd_profile">
+                  <% }%>
+               </button>
+               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation" style="text-align: center"><a role="menuitem" tabindex="-1" href="/<%=userID%>">마이페이지</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation" style="text-align: center"><a role="menuitem" tabindex="-1" href="/signout">로그아웃</a></li>
+               </ul>
+            </div>
+         </li>
+      </ul>
+
+      <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+</nav>
+
+
+<section>
+
+   <div id="s1">
+      <h3 class="section_text">How to <span class="share">share</span> files easily</h3>
+
+      <% if( userID == undefined) { %>
+      <div class="login_form">
+         <form method="post" action="/signin">
+            <fieldset>
+               <input type="text" placeholder="아이디" class="input_id" name="userID" autocomplete=off><br/>
+               <input type="password" placeholder="비밀번호" class="input_pw" name="userPW" autocomplete=off><br/>
+               <input type="submit" value="로그인" class="login_btn"><br/>
+               <% if (status==500) { %>
+               <p class="idpw">아이디와 패스워드가 일치하지 않습니다.</p>
+               <% } %>
+               <p class="join_p">아직 FLAG 회원이 아니신가요? <a href="sub/join.html" class="color_box1">회원가입</a></p>
+            </fieldset>
+         </form>
+      </div>
+      <% } else { %>
+      <div class="upload_form">
+         <% if(status==200){%>
+         <p class="success">업로드 성공!</p>
+         <input id="url_btn" type="button" value='fflag.me/<%=userID%>/<%=flagName%>' onclick="copy_trackback('fflag.me/<%=userID%>/<%=flagName%>'); return false;"/>
+
+
+
+         <%} else if(status==400){%>
+         <p class="success">업로드 실패!</p>
+         <%} else if(status==300){%>
+         <p class="success">플래그 중복!</p>
+         <%}%>
+
+
+
+
+         <form method="post" enctype="multipart/form-data" action="/fileUpload" class="dd_form">
+
+            <div class="pp">
+               <div>
+                  <input type="radio" name="filePrivate" id="radio1" class="radio" value="public" checked/>
+                  <label for="radio1">공개</label>
+               </div>
+               <div>
+                  <input type="radio" name="filePrivate" id="radio2" class="radio" value="private" />
+                  <label for="radio2">비공개</label>
+               </div>
+            </div>
+            <input type="file" name="fileURL" class="d_d">
+
+            <ul class="add_form">
+               <li><input type="text" name="address" class="address_input" value="fflag.me/<%=userID%>/" readonly="readonly"></li>
+               <li><input type="text" name="flagName" class="flag_input" placeholder="FLAG명을 입력하세요."></li>
+            </ul>
+
+            <input type="submit" value="upload" class="upload_btn"/>
+         </form>
+      </div>
+      <% }%>
+
+
+
+
+
+
+   </div>
+   <div id="ss">
+      <a href="/"><img id="gogo" src="../images/gogo.png"/></a>
+   </div>
+   <div id="s2"> <!--사용법-->
+      <div class="container">
+         <div class="col-lg-12 text-center" style="margin-top:100px;">
+            <h1 class="section-heading">INTRODUCE</h1>
+            <h3 class="section-heading" style="margin-top:50px;">FLAG가 무엇인가요?</h3>
+            <h3 class="section-subheading text-muted">
+               FLAG 는 파일에 붙이는 별명입니다</br>
+               이 별명으로 원하는 파일을 업로드하면</br>
+               주소창을 통해 로그인없이 ID 와 FLAG 만으로</br>
+               다운로드 받을 수 있습니다
+            </h3>
+         </div>
+         <div class="col-xs-12 text-center" id="introduce" style="margin-top:100px;">
+            <img src="/images/introduce_icon_url_clean2.png" class="img-responsive center-block">
+            <h3>
+               주소창에 fflag.me/ID/FLAG 를 입력하세요.</br>
+               바로 다운로드가 시작됩니다!
+            </h3>
+         </div>
+         <div class="col-xs-12 text-center" id="introduce" style="margin-top:100px; margin-bottom:100px;">
+            <img src="/images/introduce_monitor_and_phone.png" class="img-responsive center-block">
+            <h3>모든 디바이스에서 FLAG Cloud를 이용하세요!</h3>
+            <a href="https://play.google.com/store/apps"><h4>안드로이드 어플리케이션 다운로드</h4></a></br>
+         </div>
+
+         <div class="row" style="margin-top:100px">
+            <div class="col-xs-4 text-center" id="introduce">
+               <img src="/images/introduce_icon_store_color.png" class="img-responsive center-block img-circle">
+               <h3>파일 저장</h3>
+            </div>
+            <div class="col-xs-4 text-center" id="introduce">
+               <img src="/images/introduce_icon_share_color.png"class="img-responsive center-block img-circle">
+               <h3>파일 공유</h3>
+            </div>
+            <div class="col-xs-4 text-center" id="introduce">
+               <img src="/images/introduce_icon_manage_color.png"class="img-responsive center-block img-circle">
+               <h3>파일 관리</h3>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div id="s3">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text-center" style="margin-top: 100px;">
+               <h1 class="section-heading">HOW TO USE</h1>
+            </div>
+         </div>
+         <div class="col-lg-12 text-center" style="margin-bottom: 20px; margin-top: 20px;">
+            <h2 class="section-heading">업로드</h2>
+         </div>
+         <div class="col-xs-4" id="introduce1">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des3_r.png">
+               <div class="overlay">
+                  <h2>로그인 합니다.</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-xs-4" id="introduce1">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des4_r.png">
+               <div class="overlay">
+                  <h2>파일을 선택합니다.</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-xs-4" id="introduce1">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des5_r.png">
+               <div class="overlay">
+                  <h2>플래그명을 작성하고<br/>공개, 비공개를 선택하여<br/>업로드합니다.</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-12 text-center" style="margin-bottom: 20px; margin-top: 20px;">
+            <h2 class="section-heading">파일공유</h2>
+         </div>
+
+         <div class="col-xs-4" id="introduce2">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des6_r.png">
+               <div class="overlay">
+                  <h2>fflag.me/ 주소에<br/>친구의 아이디를 입력하면<br/>친구가 올린 파일을<br/>확인할 수 있습니다.</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-xs-4" id="introduce2">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des7_r.png">
+               <div class="overlay">
+                  <h2>fflag.me/ 주소에<br/>아이디와 플래그를<br/>작성하여 다운로드를<br/>받을 수 있습니다.</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-xs-4" id="introduce2">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des8_r.png">
+               <div class="overlay">
+                  <h2>업로드된 파일의 URL로<br/>쉽게 공유하세요.</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-12 text-center" style="margin-bottom: 20px; margin-top: 20px;">
+            <h2 class="section-heading">파일관리</h2>
+         </div>
+         <div class="col-xs-4" id="introduce3">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des9_r.png">
+               <div class="overlay">
+                  <h2>마이페이지에서 자신이<br/>업로드한 파일을<br/>쉽게 확인하세요</h2>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-xs-4" id="introduce3">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des10_r.png">
+               <div class="overlay">
+                  <h2>클립보드, 공개버튼, 휴지통을<br/>이용하여 자신이 업로드한<br/>파일을 쉽게 관리하세요</h2>
+               </div>
+            </div>
+         </div>
+         <div class="col-xs-4" id="introduce3">
+            <div class="hovereffect">
+               <img class="img-responsive" src="../images/des11_r.png">
+               <div class="overlay">
+                  <h2>할당된 500MB 사용량을<br/>쉽게 확인하세요.</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+</section>
+<footer>
+   <p>2016 &copy; Hansung University Graduation Project</p>
+</footer>
+</body>
+</html>

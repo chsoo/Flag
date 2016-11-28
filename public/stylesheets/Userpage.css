@@ -1,0 +1,191 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{ margin: 0px; padding: 0px; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; color:#000000; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none; }
+table{ border-collapse:collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ display: none; }
+input[type=button], input[type=submit], input[type=reset], input[type=image], button{ cursor: pointer; }
+header, section, footer, nav, aside, figure, article{ display: block; margin: 0px; padding: 0px; }
+
+
+
+
+
+table{width: 100%; margin: 0px auto;}
+
+table > thead > tr >th{
+	width: 30%;
+	text-align: center;
+	font-size: 16px;
+	color: #22313f;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #888888;
+}
+
+table > tbody > tr >td:nth-child(1){
+	 width: 10%;
+}
+
+table > tbody> tr >td{
+	width: 30%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: #22313f;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+table > thead > tr >th:nth-child(1){
+	width: 10%;
+}
+
+
+table > tbody> tr:nth-child(2n){
+	background-color: #efefef;
+}
+
+table > tbody> tr:last-child > td:first-child{
+	border-radius: 0px 0px 0px 10px;
+}
+
+table > tbody> tr:last-child > td:last-child{
+	border-radius: 0px 0px 10px 0px;
+}
+
+
+input[type=button]{
+	width: 35px;
+	height:35px;
+	margin-left: 25px;
+	background-color: #fff;
+	border: none;
+	border-radius: 7px;
+}
+
+input[type=button]:hover{
+	background-color: #ddd;
+}
+
+.pp_btn1{
+	background-image: url(../images/unlock.png);
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	background-position: center;
+	margin-left: 0px;
+}
+
+.pp_btn2{
+	background-image: url(../images/lock.png);
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	background-position: center;
+	margin-left: 0px;
+}
+
+input[type=button]:nth-child(1){
+	background-image: url(../images/clip.png);
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	background-position: center;
+}
+input[type=button]:nth-child(3){
+	background-image: url(../images/delete.png);
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	background-position: center;
+}
+
+
+.graph-container {
+	width: 160px;
+	margin-left: auto;
+	display: block;
+}
+
+.graph-donut {
+	position: relative;
+	display: inline-block;
+	width: 160px;
+	text-align: center;
+}
+
+.graph-donut canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.graph-title {
+	margin-top: 75px;
+	text-align: center;
+	font-size: 18px;
+	color: #40b96b;
+}
+
+
+.percent {
+	display: inline-block;
+	font-size: 20px;
+	color: #40b96b;
+	margin-top: 65px;
+}
+
+.percent:after {
+	content: '%';
+}
+
+
+.tp{
+	font-size: 20px;
+	font-weight: bold;
+	color: #999999;
+	padding: 10px;
+	background-image: url("../images/title_background.png");
+	border-bottom: 1px solid #999;
+	border-radius: 10px 10px 0px 0px;
+}
+
+ #c1{
+	background-color: #fff;
+}
+#p1{
+	height: 360px;
+}
+
+#remark_table {
+	/*border: 3px solid #000;*/
+	padding: 10px;
+	width: 80%;
+}
+
+#remark_table td{
+	margin: 0px;
+	padding: 0px;
+	width: 33.3%;
+	text-align: center;
+}
+
+#remark_table  thead{
+	font-weight: bold;
+}
+
+#remark_table thead td{
+	border-top: 1px solid #999;
+	height: 35px;
+	line-height: 35px;
+}
+
+#remark_table tbody td{
+	font-weight: normal;
+	border-bottom: 1px solid #999;
+	height:35px;
+	line-height: 35px;
+}
+
+

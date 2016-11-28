@@ -1,0 +1,79 @@
+header{
+    width: 100%;
+    height: 80px;
+    margin: 0px auto;
+    position: fixed;
+    z-index: 999;
+    background-color: #22313f;
+}
+
+
+#header_nav{
+    background-color: #22313f;
+    height: 80px;
+}
+
+#header_1{
+    width:70%;
+}
+
+#flag_logo{
+    width:200px;
+    padding: 7px 15px;
+}
+#nav_ul{
+}
+
+#nav_ul li {
+    margin-top: 15px;
+}
+
+
+
+
+#dropdown{
+    margin-top: 10px;
+}
+#dd_profile{
+    width:20px;
+}
+
+
+#header_wrap{
+    width: 100%;
+    height: 80px;
+    margin: 0px auto;
+    position: relative;
+}
+
+#header_wrap > p{
+    float: right;
+    color: #fff;
+    line-height: 80px;
+}
+
+#header_wrap > ul{
+    width:500px;
+    height:100px;
+    float: right;
+}
+
+#header_wrap > ul > li{
+    float: right;
+    line-height: 80px;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+#header_wrap > ul > li > a{
+    color: #fff;
+}
+
+#top_logo{
+    width: 128px;
+    height: 50px;
+    margin-top: 15px;
+}
+.a{
+    color: #fff;
+}

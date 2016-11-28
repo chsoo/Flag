@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Download - FLAG</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon_flag.ico" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Indie+Flower|Nunito|Orbitron' rel='stylesheet' type='text/css'>
+
+	<link type="text/css" rel="stylesheet" href="/stylesheets/download.css"/>
+
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(function v11(){$("img").animate({"top": "-30px"}, 700, null, v11);});
+			$(function v22(){$("img").animate({"top": "0px"}, 700, null, v22);});
+		});
+	</script>
+
+</head>
+<body>
+<h1>FLAG</h1>
+
+<img class="img_flag" src="../images/down_flag.png">
+<p><span> 감사합니다. </span><br/></br>
+	<%=fileName%>파일을 다운로드 하시겠습니까 ?</p>
+
+<form action="/download/<%=userID%>/<%=flagName%>">
+	<input class="down_btn" type="submit" value="다운로드"/>
+</form>
+
+</body>
+</html>

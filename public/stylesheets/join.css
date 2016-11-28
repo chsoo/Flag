@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+*{ margin: 0px; padding: 0px; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; color:#000000; }
+li{ list-style: none; } 
+a{ text-decoration: none; } 
+img{ border: none; }
+table{ border-collapse:collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ display: none; }
+input[type=button], input[type=submit], input[type=reset], input[type=image], button{ cursor: pointer; }
+header, section, footer, nav, aside, figure, article{ display: block; margin: 0px; padding: 0px; }
+
+
+
+.join_wrap{
+	border: 0.1px solid #000;
+	width:450px;
+	height: 500px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAWUlEQVQYV2NUMrT/z4AEWFjZGP78/oUsBGYzIisEKYIBdMVwhTBFIAXIbJhGsEJsEuhijGpmrmA3YnMXsmKwwj+/fjAwMDJheAAkAFOM4hmsKqGKiVIIMgAAsJInr4PnIRoAAAAASUVORK5CYII=),repeat;
+}
+
+
+.join_form{
+	margin: 0px auto;
+	width: 250px;
+}
+
+h1{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: #fff;
+
+}
+
+.input_id{
+	background-image: url(../images/user_icon.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 30px 30px;
+	background-position: 5px;
+}
+
+.input_pw{
+	background-image: url(../images/key_icon.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 30px 30px;
+	background-position: 5px;
+}
+
+.input_pw2{
+	background-image: url(../images/key_icon2.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 30px 30px;
+	background-position: 5px;
+}
+
+.email{
+	background-image: url(../images/mail1.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 30px 30px;
+	background-position: 5px;
+}
+
+
+input:focus{
+	box-shadow: 0 0 10px #26a65b;
+	border-color: #26a65b;
+	outline: none;
+}
+
+input[type=text],input[type=password]{
+	border: none;
+	border-radius: 6px;
+	width: 205px;
+	height: 50px;
+	margin-top: 10px;
+	padding-left: 40px;
+	font-size: 15px;
+}
+
+.join_btn,.reset_btn{
+	height: 40px;
+	width: 100px;
+	margin: 11px;
+	margin-top: 30px;
+	border : none;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+.join_btn{
+	background-color: #26a65b;
+	color: #fff;
+}
+
+
